@@ -1,0 +1,3227 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+/*==========================
+
+  table of content:
+
+  1. general styles
+  
+  2. preloader
+
+  3. callBackModal
+
+  4. callBackForm
+
+  5. back to top button
+
+  6. first view
+
+  7. styles for all range inputs
+
+  8. advantages
+
+  9. general prices
+
+  10. prices modal
+
+  11. ceiling types
+
+  12. ceiling catalog
+
+  13. ceiling illustration modal
+
+  14. feedbacks
+
+  15. certificates
+
+  16. about
+
+  17. about modal
+
+  18. working process
+
+  19. main calculator
+
+  20. faq
+
+  21. footer
+
+  22. media (max-width: 1200px)
+
+  23. media (max-width: 900px)
+
+  24. media (max-width: 600px)
+
+============================*/
+
+
+/*==========================
+  general styles
+============================*/
+
+html {
+  font-family: 'Montserrat',
+    sans-serif;
+}
+
+::selection {
+  background: #6481c7;
+  color: white;
+}
+
+::-moz-selection {
+  background: #6481c7;
+}
+
+section>.container>h2,
+section.container>h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+section {
+  margin-top: 10em;
+  padding-top: 5em;
+}
+
+.container {
+  width: 90%;
+  max-width: 1800px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.whited {
+  background-color: white;
+}
+
+.invisible {
+  display: none;
+}
+
+.transparented {
+  opacity: 0;
+}
+
+
+/*==========================
+  end of general styles
+============================*/
+
+/*==========================
+  preloader
+============================*/
+
+body>.loader {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body>.loader>img {
+  width: 100px;
+}
+
+body>.loader.hidden {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+/*==========================
+  end of preloader
+============================*/
+
+/*==========================
+  callBackModal
+============================*/
+
+.callBackModal .tingle-modal-box {
+  width: 25%;
+  max-width: 80%;
+  margin: auto;
+}
+
+.callBackModal .tingle-modal-box__content {
+  padding: 3rem 2rem 1.2rem;
+}
+
+.callBackModal h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.callBackModal .callBackForm {
+  width: 100%;
+}
+
+.callBackModal input[type="text"],
+.callBackModal input[type="tel"],
+.callBackModal .button {
+  display: block;
+  min-width: 90%;
+  margin: auto;
+  padding: 1em;
+  border: 1.2px solid #ed7d02;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.callBackModal .tingle-modal-box__footer {
+  padding: 0 2rem 3rem;
+  background-color: inherit;
+}
+
+.callBackModal .button {
+  background-color: #fff;
+  color: #000;
+}
+
+.callBackModal .button:hover {
+  background-color: rgba(241, 158, 74, .7);
+  color: white
+}
+
+.callBackModal .button:active {
+  background-color: rgb(222, 109, 74);
+  color: white
+}
+
+/*==========================
+  end of callBackModal
+============================*/
+
+/*==========================
+  callBackForm
+  ==========================*/
+
+.callBackForm .name.err,
+.callBackForm .phoneNumber.err {
+  border: 1.2px solid red;
+  background-color: #ffdada;
+}
+
+.callBackForm .msg {
+  font-size: 0.5rem;
+  color: red;
+  margin: auto;
+  margin-top: 1em;
+  width: 90%;
+}
+
+.callBackForm .msg.successful {
+  color: green;
+}
+
+/*==========================
+  end of callBackForm
+  ==========================*/
+
+/*==========================
+  back to top button
+  ==========================*/
+
+.backToTop {
+  display: none;
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  bottom: calc(1rem + 2vh);
+  right: calc(2rem + 1vw);
+  z-index: 900
+}
+
+.backToTop button {
+  border: none;
+  background: none;
+  font-size: calc(1.5rem + 1.5vw);
+  cursor: pointer;
+  outline: none;
+  padding: 0
+}
+
+.backToTopIllustration {
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: 0.3s ease transform, box-shadow;
+}
+
+.backToTopIllustration:hover,
+.backToTopIllustration:focus {
+  opacity: 1;
+}
+
+.backToTopIllustration:active {
+  transform: scale(.8);
+}
+
+/*==========================
+  end of back to top button
+  ==========================*/
+
+/*==========================
+  first view
+============================*/
+
+.firstView {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.header {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  width: 100%;
+}
+
+.headerTop {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .7);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.headerTop .container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerTop .logo {
+  width: 7%;
+}
+
+.header .logo a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.header .logo img {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.headerInf {
+  box-sizing: border-box;
+  width: 65%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.headerInf p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.headerInf p:last-of-type {
+  text-align: right;
+}
+
+.headerTop .callBackButton {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headerTop .callBackButton>button {
+  min-width: 70%;
+  max-width: 100%;
+}
+
+.headerTop .callBackButton>button {
+  font-size: 1.2rem;
+  padding: .7em 1em;
+}
+
+.headerTop .callBackButton>button,
+.headerDown.nav .callBackButton>button {
+  border: .1em solid #ed7d02;
+  transition-duration: 0.5s;
+  transition-property: transform;
+  cursor: pointer;
+}
+
+.headerTop .callBackButton>button:hover,
+.headerDown.nav .callBackButton>button:hover,
+.headerTop .callBackButton>button:focus,
+.headerDown.nav .callBackButton>button:focus {
+  transform: scale(1.03, 1.03);
+}
+
+.headerTop .callBackButton>button:active,
+.headerDown.nav .callBackButton>button:active {
+  color: gray;
+  border-color: #fb6d3c;
+}
+
+.headerTop .menuIcon {
+  display: none;
+  width: 5%;
+  color: transparent;
+  cursor: pointer;
+}
+
+.headerTop .menuIcon img {
+  width: 100%;
+}
+
+.logo.mainLogo.invisible,
+.headerInf.invisible {
+  display: none;
+}
+
+.headerDown.nav>ul {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.headerDown.nav li>a {
+  color: white;
+}
+
+.headerDown.nav li {
+  cursor: pointer;
+}
+
+.headerDown.nav li:hover,
+.headerDown.nav li>a:hover,
+.headerDown.nav li:focus,
+.headerDown.nav li>a:focus {
+  text-shadow: 1px 1px 4px white;
+}
+
+.headerDown.nav li:active,
+.headerDown.nav li>a:active {
+  text-shadow: 1px 1px 4px white;
+  color: #ed7d02;
+}
+
+.headerDown.nav.dropDown li>a {
+  color: black;
+}
+
+.headerDown.nav.dropDown li:active,
+.headerDown.nav.dropDown li>a:active {
+  color: #ed7d02;
+}
+
+.mainSlider {
+  margin-top: unset;
+  padding-top: unset;
+}
+
+.mainSlider .glide {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  background-color: black;
+}
+
+.mainSlider .glide__slides {
+  width: 100%;
+  height: 100vh;
+}
+
+.mainSlider .glide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(30%);
+}
+
+.mainSlider .glide__bullets {
+  position: absolute;
+  bottom: 2%;
+  right: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.mainSlider .glide__bullet {
+  z-index: 10;
+  border-top: .2rem orange solid;
+  width: 2rem;
+  margin-right: 2em;
+  cursor: pointer;
+}
+
+.mainSlider .glide__bullet:last-child {
+  margin-right: 0;
+}
+
+.mainSlider .glide__bullet--active {
+  border-top: .2rem white solid;
+}
+
+.firstView>.main {
+  z-index: 5;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+  width: 100vw;
+  margin-top: unset;
+  padding-top: unset;
+}
+
+.firstView .main .container {
+  height: 90%;
+}
+
+.firstView .board {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.firstView .board .slogan {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1em;
+  line-height: 1.2;
+}
+
+.firstView .mainAdvantagesContainer {
+  display: flex;
+}
+
+.firstView .mainAdvantages {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+  padding-left: 5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.firstView .singleAdvantage {
+  padding: .5em 0
+}
+
+.firstView .singleAdvantage:last-of-type {
+  border-top: .1rem solid #ed7d02
+}
+
+.firstView .littleCalcContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.firstView .littleCalc {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 150px;
+  background: rgba(60, 88, 158, .9);
+  padding: 3em;
+  box-sizing: border-box;
+}
+
+.firstView .littleCalc sup {
+  vertical-align: super
+}
+
+
+/*==========================
+  styles for all range inputs
+============================*/
+
+.firstView .littleCalc input[type=range],
+.mainCalc input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  margin: 2em 0
+}
+
+@supports (-ms-accelerator:true) {
+
+  .firstView .littleCalc input[type=range],
+  .mainCalc input[type="range"] {
+    margin: 0
+  }
+}
+
+@supports (-ms-ime-align:auto) {
+
+  .firstView .littleCalc input[type=range],
+  .mainCalc input[type="range"] {
+    margin: 0
+  }
+}
+
+.firstView .littleCalc input[type=range]:focus,
+.mainCalc input[type="range"]:focus {
+  outline: none
+}
+
+.firstView .littleCalc input[type=range]::-webkit-slider-runnable-track,
+.mainCalc input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+  background: #ed7d02;
+  border-radius: 25px;
+  border: 0 solid #ed7d02
+}
+
+.firstView .littleCalc input[type=range]::-webkit-slider-thumb,
+.mainCalc input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+  border: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #ed7d02;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5.6px
+}
+
+.firstView .littleCalc input[type=range]:active::-webkit-slider-thumb,
+.mainCalc input[type=range]:active::-webkit-slider-thumb {
+  height: 16px;
+  width: 16px;
+  margin-top: -6px
+}
+
+.firstView .littleCalc input[type=range]:focus::-webkit-slider-thumb,
+.mainCalc input[type=range]:focus::-webkit-slider-thumb {
+  outline: #ff5013
+}
+
+.firstView .littleCalc input[type=range]:focus::-webkit-slider-runnable-track,
+.mainCalc input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #fb6d3c
+}
+
+.firstView .littleCalc input[type=range]::-moz-range-track,
+.mainCalc input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+  background: #ed7d02;
+  border-radius: 25px;
+  border: 0 solid #ed7d02
+}
+
+.firstView .littleCalc input[type=range]::-moz-range-thumb,
+.mainCalc input[type=range]::-moz-range-thumb {
+  box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+  border: 0 solid #000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #ed7d02;
+  cursor: pointer;
+  margin-top: -5.6px
+}
+
+.firstView .littleCalc input[type=range]:active::-moz-range-thumb,
+.mainCalc input[type=range]:active::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  margin-top: -6px
+}
+
+.firstView .littleCalc input[type=range]::-ms-track,
+.mainCalc input[type=range]::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 15px 0;
+  color: transparent
+}
+
+.firstView .littleCalc input[type=range]::-ms-fill-lower,
+.mainCalc input[type=range]::-ms-fill-lower {
+  background: #ed7d02;
+  border: 0 solid #ed7d02;
+  border-radius: 50%;
+  box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d
+}
+
+.firstView .littleCalc input[type=range]::-ms-fill-upper,
+.mainCalc input[type=range]::-ms-fill-upper {
+  background: #ed7d02;
+  border: 0 solid #ed7d02;
+  border-radius: 50%;
+  box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d
+}
+
+.firstView .littleCalc input[type=range]::-ms-thumb,
+.mainCalc input[type=range]::-ms-thumb {
+  box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+  border: 0 solid #000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #ed7d02;
+  cursor: pointer;
+  margin-bottom: -5px;
+  transition-duration: 0.3s;
+  transition-property: height, width
+}
+
+.firstView .littleCalc input[type=range]::-ms-thumb:hover,
+.mainCalc input[type=range]::-ms-thumb:hover {
+  height: 16px;
+  width: 16px
+}
+
+.firstView .littleCalc input[type=range]:focus::-ms-fill-lower,
+.mainCalc input[type=range]:focus::-ms-fill-lower {
+  background: #fb6d3c
+}
+
+.firstView .littleCalc input[type=range]:focus::-ms-fill-upper,
+.mainCalc input[type=range]:focus::-ms-fill-upper {
+  background: #fb6d3c
+}
+
+/*==========================
+  end of styles for all range inputs
+============================*/
+
+.firstView .littleCalc h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.firstView .littleCalc p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.firstView .littleCalc p.areaOfCeiling {
+  display: flex;
+  flex-direction: column;
+}
+
+.firstView .littleCalc span.areaOfCeiling {
+  color: white;
+  font-size: 1rem;
+}
+
+.firstView .littleCalc>p:nth-of-type(2) {
+  font-size: 0.7rem;
+}
+
+.firstView .littleCalc p>button {
+  padding: 1em 1.5em;
+  border: .1em solid #ed7d02;
+  cursor: pointer;
+  margin-bottom: .5em;
+}
+
+.firstView .littleCalc p>button:hover,
+.firstView .littleCalc p>button:focus {
+  background-color: rgba(241, 158, 74, .7);
+  color: white;
+}
+
+.firstView .littleCalc p>button:active {
+  border-color: white;
+  color: white
+}
+
+.firstView .littleCalc span.totalAmount {
+  color: white;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 1em 0;
+}
+
+.firstView .littleCalc .mainCalcLink {
+  font-size: 0.7rem;
+  margin-top: 0.7em;
+  display: inline-block;
+}
+
+.firstView .littleCalc .mainCalcLink {
+  text-decoration: underline;
+}
+
+.firstView .littleCalc small a:hover,
+.firstView .littleCalc small a:focus {
+  transform: scale(1.01);
+  font-weight: 600;
+}
+
+
+/*==========================
+  end of first view
+============================*/
+
+/*==========================
+  advantages section
+============================*/
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages .advantagesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.advantages .advantagesListItem {
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.advantages .advantage {
+  width: 100%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.advantages .advantageIllustration {
+  width: 15%;
+}
+
+.advantages .advantageIllustration img {
+  width: 100%;
+}
+
+.advantages .advantageCaption {
+  box-sizing: border-box;
+  width: 75%;
+}
+
+.advantages .advantageTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  letter-spacing: 1px;
+}
+
+.advantages .advantageDescription {
+  font-family: 'Raleway', sans-serif;
+  text-align: justify;
+}
+
+.advantages .advantageDescription sup {
+  vertical-align: super;
+  font-size: 0.7rem;
+}
+
+/*==========================
+  end of advantages section
+============================*/
+
+/*==========================
+  general prices section
+============================*/
+
+.generalPrices {
+  background-image: url(../images/general_prices/bgi_left_top.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 12em;
+}
+
+.generalPrices .priceList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.generalPrices .priceListItem {
+  width: 30%;
+  margin-top: 5em;
+  box-shadow: 1px 1px 8px 1px #cfcfcf;
+}
+
+.generalPrices .priceListItemInf {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.generalPrices .priceListItemIllustration {
+  height: 45%;
+  width: 100%;
+}
+
+.generalPrices .priceListItemCaption {
+  height: 55%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.generalPrices .priceListItemImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.generalPrices .priceListItemTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.generalPrices .manufacturerInf {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-right: 2em;
+  padding-left: 2em;
+  box-sizing: border-box;
+}
+
+.generalPrices .manufacturerInf>* {
+  width: 100%;
+}
+
+.generalPrices .manufacturerInfTitle {
+  font-size: 1.1rem;
+  margin-bottom: 1em;
+}
+
+.generalPrices .manufacturers {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  line-height: 1.5;
+}
+
+.generalPrices .manufacturer {
+  box-sizing: border-box;
+  width: 50%;
+  font-size: 0.7rem;
+}
+
+.generalPrices .manufacturer:nth-child(odd) {
+  text-align: left;
+  padding-right: 0.3em;
+}
+
+.generalPrices .manufacturer:nth-child(even) {
+  text-align: right;
+  padding-left: 0.3em;
+}
+
+.generalPrices .minPriceForCeilingType,
+.generalPrices .forMoreLink {
+  text-align: center;
+  padding-right: 1em;
+  padding-left: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.generalPrices .minPriceForCeilingType sup {
+  vertical-align: super;
+  /*used em because it is convenient to look at the font size of a parent*/
+  font-size: 0.7em;
+}
+
+.generalPrices .forMoreLink {
+  text-decoration: underline;
+}
+
+/*==========================
+  end of general prices section
+============================*/
+
+/*==========================
+  prices modal
+============================*/
+
+
+
+/*==========================
+  end of prices modal
+============================*/
+
+/*==========================
+  ceiling types section
+============================*/
+
+.ceilingTypes {
+  background-image: url(../images/ceiling_types/bgi_left_bottom.png), url(../images/ceiling_types/bgi_right_top.png);
+  background-repeat: no-repeat;
+  background-position: bottom left, right top;
+  background-size: 7em, 15em;
+}
+
+.ceilingTypes .ceilingTypesInf {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  height: 710px; /*temp decision to set a height*/
+}
+
+.ceilingTypes .ceilingTypeList {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ceilingTypes .ceilingTypeListItem {
+  padding: 1em;
+  font-size: 1rem;
+  text-align: center;
+  border: 1.5px solid #ed7d02;
+  cursor: pointer;
+}
+
+.ceilingTypes .ceilingTypeListItem:hover {
+  background-color: #a09c9c;
+  color: white;
+}
+
+.ceilingTypes .ceilingTypeListItem.selected {
+  background-color: #6481c7;
+  color: white;
+}
+
+.ceilingTypes .ceilingTypeListItem.selected:hover {
+  background-color: #6481c7;
+}
+
+.ceilingTypes .ceilingTypeIllustration {
+  display: none;
+  width: 60%;
+  height: 100%; /*temp decision to set a height*/
+  border: 1.5px solid #ed7d02;
+}
+
+.ceilingTypes .ceilingTypeIllustration.selected {
+  display: block;
+}
+
+.ceilingTypes .ceilingTypeIllustration>figure {
+  width: 100%;
+  height: 75%; /*temp decision to set a height*/
+  overflow: hidden;
+}
+
+.ceilingTypes .ceilingTypeImage {
+  width: 100%;
+  height: 100%; /*temp decision to set a height*/
+  object-fit: cover;
+}
+
+.ceilingTypes .ceilingTypeCaption {
+  width: 100%;
+  height: 25%; /*temp decision to set a height*/
+  font-size: 1rem;
+  line-height: 1.5;
+  display: flex;
+}
+
+
+.ceilingTypes .ceilingTypeCaptionContent {
+  margin: auto;
+  padding: 1em;
+  text-align: justify;
+}
+
+/*==========================
+  end of ceiling types section
+============================*/
+
+/*==========================
+  ceiling catalog section
+============================*/
+
+.ceilingCatalog .categoryNav {
+  display: flex;
+}
+
+.ceilingCatalog .categoryList {
+  margin: auto;
+  width: 100%;
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.ceilingCatalog .categoryListItem.selected {
+  color: #ed7d02;
+}
+
+.ceilingCatalog .categoryInf {
+  padding: 1em;
+}
+
+.ceilingCatalog .filterNav {
+  display: flex;
+}
+
+.ceilingCatalog .filterList {
+  margin: auto;
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.ceilingCatalog .filterListItem {
+  box-sizing: border-box;
+  padding: 0.7em 0.5em;
+  border: 1.2px solid #ed7d02;
+  margin-right: 0.3em;
+  cursor: pointer;
+  text-align: center;
+  /* flex-basis: 0;
+  flex-grow: 1; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ceilingCatalog .filterListItem:hover {
+  background-color: #a09c9c;
+  color: white;
+}
+
+.ceilingCatalog selected.filterListItem:hover {
+  background-color: #6481c7;
+  color: initial;
+}
+
+.ceilingCatalog .filterListItem:last-child {
+  margin-right: 0;
+}
+
+.ceilingCatalog .filterListItem.selected {
+  background-color: #6481c7;
+  color: white;
+}
+
+.ceilingCatalog .imageGallery {
+  position: relative;
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+.ceilingCatalog .imageGalleryIllustration {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ceilingCatalog .mainImageContainer {
+  width: 65%;
+}
+
+.ceilingCatalog .mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ceilingCatalog .secondaryImagesContainer {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ceilingCatalog .secondaryImageContainer {
+  display: flex;
+  height: 47%;
+  width: 100%;
+}
+
+.ceilingCatalog .secondaryImage {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ceilingCatalog .controllersContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin-top: 1em;
+}
+
+.ceilingCatalog .directionControllersContainer {
+  width: 25%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ceilingCatalog .directionController {
+  outline: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 25px;
+  width: 25px;
+  background-image: url(../images/ceiling_catalog/right_arrow.svg);
+  background-position: top right;
+}
+
+.ceilingCatalog .directionController.prev {
+  transform: rotate(180deg);
+}
+
+.ceilingCatalog .pager {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ceilingCatalog .pagerItem {
+  width: 30%;
+  display: inline-block;
+  border-top: 0.25em solid #ed7d02;
+  z-index: 10;
+}
+
+.ceilingCatalog .pagerItem.selected {
+  border-top: 0.25em solid #6481c7;
+}
+
+/*==========================
+  end of ceiling catalog section
+============================*/
+
+/*==========================
+  ceiling illustration modal
+============================*/
+
+/*==========================
+  end of ceiling illustration modal
+============================*/
+
+/*==========================
+  feedbacks section
+============================*/
+
+/*resets the margin-top since it makes too much white space above*/
+section.feedbacks {
+  margin-top: 5em;
+}
+
+.feedbacks .feedbackTypes {
+  box-sizing: border-box;
+  padding-bottom: 3em;
+  padding-right: 1em;
+  padding-left: 1em;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.feedbacks .feedbackType:first-child {
+  margin-right: 1em;
+}
+
+.feedbacks .feedbackType.selected {
+  color: #ed7d02;
+}
+
+.feedbacks .videoFeedbacks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 600px;
+}
+
+.feedbacks .videoFeedback {
+  width: 30%;
+  margin-top: 2em;
+}
+
+.feedbacks .videoFeedback iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/*==========================
+  end of feedbacks section
+============================*/
+
+/*==========================
+  about section
+============================*/
+
+.about .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* all children must be displayed clearly*/
+.about .content>* {
+  box-shadow: rgb(207, 207, 207) 1px 1px 8px 1px;
+}
+
+.about .facts {
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 40%;
+  padding: 2.5em 1.5em;
+  box-sizing: border-box;
+}
+
+.about .fact {
+  padding-bottom: 2em;
+}
+
+.about .fact:last-child {
+  padding-bottom: unset;
+}
+
+.about .description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+  width: 55%;
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* to display all children in a new row*/
+.about .description>* {
+  width: 100%;
+}
+
+.about .linkToDetails {
+  align-self: flex-end;
+  text-align: right;
+  text-decoration: underline;
+}
+
+/*==========================
+  end of about section
+============================*/
+
+/*==========================
+  about modal
+============================*/
+
+
+
+/*==========================
+  end of about modal
+============================*/
+
+/*============================
+  working process section
+  ============================*/
+
+.workingProcess .steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.workingProcess .step {
+  width: 30%;
+  min-height: 350px;
+  box-shadow: rgb(207, 207, 207) 1px 1px 8px 1px;
+  box-sizing: border-box;
+  padding: 2em 3em;
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.workingProcess .stepName {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.workingProcess .stepDescription {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.workingProcess .step:nth-child(1)::after {
+  content: "";
+  opacity: .5;
+  top: 5%;
+  right: 0;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../images/working_process/bgi_1_top_right.png);
+  background-position: 95% 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.workingProcess .step:nth-child(2)::after {
+  content: "";
+  opacity: .5;
+  top: 5%;
+  right: 0;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../images/working_process/bgi_2_top_right.png);
+  background-position: 95% 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.workingProcess .step:nth-child(3)::after {
+  content: "";
+  opacity: .5;
+  top: 5%;
+  right: 0;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../images/working_process/bgi_3_top_right.png);
+  background-position: 95% 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.workingProcess .step:nth-child(4)::after {
+  content: "";
+  opacity: .5;
+  top: 5%;
+  right: 0;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../images/working_process/bgi_4_top_right.png);
+  background-position: 95% 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.workingProcess .step:nth-child(5)::after {
+  content: "";
+  opacity: .5;
+  top: 5%;
+  right: 0;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../images/working_process/bgi_5_top_right.png);
+  background-position: 95% 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.workingProcess .step:nth-child(4),
+.workingProcess .step:nth-child(5),
+.workingProcess .step:last-child {
+  align-self: flex-start;
+}
+
+.workingProcess .step:last-child {
+  min-height: 450px;
+  position: relative;
+  box-shadow: unset;
+  background: url(../images/working_process/bgi_callback_top_left.jpg) no-repeat top left;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.workingProcess .step:last-child::after {
+  content: '';
+  display: block;
+  background-color: rgba(100, 129, 199, .7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.workingProcess .step:last-child h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 0 0.5px black;
+  margin-bottom: 1em;
+  z-index: 10;
+}
+
+.workingProcess .callBackForm {
+  position: relative;
+  z-index: 10;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.workingProcess .step:last-child .name,
+.workingProcess .step:last-child .phoneNumber,
+.workingProcess .step:last-child .button {
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding: 5%;
+  border: 1.2px solid #ed7d02;
+  box-sizing: border-box;
+}
+
+.workingProcess .step:last-child .name:focus,
+.workingProcess .step:last-child .phoneNumber:focus {
+  border: 1.2px solid #ff5013;
+  background-color: #ffd4a5;
+}
+
+.workingProcess .step:last-child .button {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.workingProcess .step:last-child .button:hover,
+.workingProcess .step:last-child .button:focus {
+  background-color: rgba(241, 158, 74, .7);
+  color: white;
+}
+
+.workingProcess .step:last-child .button:active {
+  background-color: rgb(222,109,74);
+  color: white
+}
+
+.workingProcess .callBackForm .msg.successful {
+  text-shadow: 0 0 .5px white;
+}
+
+.workingProcess .callBackForm .msg.successful {
+  color: white;
+  text-shadow: -1px 0 green, 0 1px green, 1px 0 green, 0 -1px green;
+}
+
+/*==============================
+  end of working process section
+  ==============================*/
+
+/*==============================
+ main calculator
+==============================*/
+
+.mainCalc {
+  box-sizing: border-box;
+  background-image: url(../images/calc/bgi_top_left.png);
+  background-repeat: no-repeat;
+  background-size: 20em;
+  background-position: top left;
+}
+
+/* the same styles for all inputs with type number */
+
+.mainCalc input[type="number"] {
+  width: 60px;
+  height: 35px;
+  outline: none;
+  border: 1px solid #ed7d02;
+  box-sizing: border-box;
+  padding-left: 1em
+}
+
+.mainCalc .mainCalcForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* all children must be displayed clearly 
+   and have the same paddings */
+.mainCalc .mainCalcForm>* {
+  box-sizing: border-box;
+  box-shadow: rgb(207, 207, 207) 1px 1px 8px 1px;
+  padding: 5em 3em;
+  background-color: white;
+}
+
+.mainCalc .sizeOfCeiling {
+  width: 30%;
+}
+
+.mainCalc .sizeOfCeiling h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2em;
+}
+
+.mainCalc .sizeOfCeiling .labelText {
+  text-align: right;
+  display: inline-block;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.mainCalc .lengthTitle,
+.mainCalc .widthTitle {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.mainCalc .lengthOfCeiling,
+.mainCalc .widthOfCeiling {
+  display: inline-block;
+  margin-right: .5em;
+}
+
+.mainCalc .formGroup:nth-child(2) {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.mainCalc .totalAmount {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.mainCalc .totalAmount .field {
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-block;
+  width: 30%;
+}
+
+.mainCalc .totalAmount .price {
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+}
+
+.mainCalc .totalAmount .value {
+  font-size: 1.7rem;
+  display: inline-block;
+  margin-right: .3em;
+}
+
+.mainCalc .totalAmount .currency {
+  font-size: 1.3rem;
+}
+
+.mainCalc .showAdditionalEls .labelText,
+.mainCalc .profileOfCeiling .labelText,
+.mainCalc .camouflageInsert .labelText {
+  font-size: 1rem;
+}
+
+.mainCalc .profileType .labelText,
+.mainCalc .camouflageInsertType .labelText {
+  font-size: 0.8rem;
+}
+
+.mainCalc .showAdditionalEls.container,
+.mainCalc .profileOfCeiling.container,
+.mainCalc .camouflageInsert.container {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.mainCalc .showAdditionalEls.container {
+  box-sizing: border-box;
+  margin-left: 2em
+}
+
+.mainCalc .profileType.container,
+.mainCalc .camouflageInsertType.container {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.mainCalc .showAdditionalEls.container input.showAdditionalEls,
+.mainCalc .profileOfCeiling.container input.profileOfCeiling,
+.mainCalc .camouflageInsert.container input.camouflageInsert,
+.mainCalc .profileType.container input.typeOfCeilingProfile,
+.mainCalc .camouflageInsertType.container input.camouflageInsertType {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.mainCalc .showAdditionalEls.container input.showAdditionalEls,
+.mainCalc .profileOfCeiling.container input.profileOfCeiling,
+.mainCalc .camouflageInsert.container input.camouflageInsert {
+  height: 0;
+  width: 0;
+}
+
+.mainCalc .showAdditionalEls.container .checkmark,
+.mainCalc .profileOfCeiling.container .checkmark,
+.mainCalc .camouflageInsert.container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.mainCalc .profileType.container .checkmark,
+.mainCalc .camouflageInsertType.container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.mainCalc .showAdditionalEls.container:hover input.showAdditionalEls~.checkmark,
+.mainCalc .profileOfCeiling.container:hover input.profileOfCeiling~.checkmark,
+.mainCalc .camouflageInsert.container:hover input.camouflageInsert~.checkmark,
+.mainCalc .profileType.container:hover input.typeOfCeilingProfile~.checkmark,
+.mainCalc .camouflageInsertType.container:hover input.camouflageInsertType~.checkmark,
+.mainCalc .showAdditionalEls.container:focus input.showAdditionalEls~.checkmark,
+.mainCalc .profileOfCeiling.container:focus input.profileOfCeiling~.checkmark,
+.mainCalc .camouflageInsert.container:focus input.camouflageInsert~.checkmark,
+.mainCalc .profileType.container:focus input.typeOfCeilingProfile~.checkmark,
+.mainCalc .camouflageInsertType.container:focus input.camouflageInsertType~.checkmark {
+  background-color: #ccc;
+}
+
+.mainCalc .showAdditionalEls.container input.showAdditionalEls:checked~.checkmark,
+.mainCalc .profileOfCeiling.container input.profileOfCeiling:checked~.checkmark,
+.mainCalc .camouflageInsert.container input.camouflageInsert:checked~.checkmark,
+.mainCalc .profileType.container input.typeOfCeilingProfile:checked~.checkmark,
+.mainCalc .camouflageInsertType.container input.camouflageInsertType:checked~.checkmark {
+  background-color: #ed7d02;
+}
+
+.mainCalc .showAdditionalEls.container input.showAdditionalEls:disabled~.checkmark,
+.mainCalc .profileOfCeiling.container input.profileOfCeiling:disabled~.checkmark,
+.mainCalc .camouflageInsert.container input.camouflageInsert:disabled~.checkmark,
+.mainCalc .profileType.container input.typeOfCeilingProfile:disabled~.checkmark,
+.mainCalc .camouflageInsertType.container input.camouflageInsertType:disabled~.checkmark {
+  background-color: rgb(149, 152, 155);
+}
+
+.mainCalc .showAdditionalEls.container .checkmark::after,
+.mainCalc .profileOfCeiling.container .checkmark::after,
+.mainCalc .camouflageInsert.container .checkmark::after,
+.mainCalc .profileType.container .checkmark::after,
+.mainCalc .camouflageInsertType.container .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.mainCalc .showAdditionalEls.container input.showAdditionalEls:checked~.checkmark:after,
+.mainCalc .profileOfCeiling.container input.profileOfCeiling:checked~.checkmark:after,
+.mainCalc .camouflageInsert.container input.camouflageInsert:checked~.checkmark:after,
+.mainCalc .profileType.container input.typeOfCeilingProfile:checked~.checkmark:after,
+.mainCalc .camouflageInsertType.container input.camouflageInsertType:checked~.checkmark:after {
+  display: block;
+}
+
+.mainCalc .showAdditionalEls.container .checkmark::after,
+.mainCalc .profileOfCeiling.container .checkmark::after,
+.mainCalc .camouflageInsert.container .checkmark::after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mainCalc .profileType.container .checkmark::after,
+.mainCalc .camouflageInsertType.container .checkmark::after {
+  top: 29%;
+  left: 32%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.mainCalc .additionalServices {
+  font-size: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.mainCalc .serviceGroup {
+  width: 45%;
+}
+
+.mainCalc .serviceGroup:first-of-type {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: space-between;
+  padding: 1em 0;
+  box-sizing: border-box;
+}
+
+/* to prevent being flattened */
+.mainCalc .serviceGroup:first-of-type>* {
+  min-width: 30%;
+  max-width: 100%;
+  margin-bottom: 1em
+}
+
+.mainCalc .serviceGroup:first-of-type .field {
+  margin-right: .3em;
+}
+
+.mainCalc .profileTypes,
+.mainCalc .camouflageInsertTypes {
+  margin-left: 1em;
+  margin-top: 1.2em
+}
+
+.mainCalc .msg {
+  color: red;
+  margin-top: 1em;
+  display: none;
+  align-self: flex-start
+}
+
+.mainCalc .disabled {
+  color: #b4b4b4
+}
+
+/*==============================
+  end of main calculator
+==============================*/
+
+/*==============================
+  faq section
+==============================*/
+
+.faq {
+  background-image: url(../images/faq/bgi_right_top.png);
+  background-size: 30em;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.faq .qaList {
+  width: 75%;
+}
+
+.faq .accordion {
+  padding: 3em 2em;
+  margin-bottom: 2em;
+  box-shadow: rgb(207, 207, 207) 1px 1px 8px 1px;
+  background-color: white;
+}
+
+.faq .accordion:last-of-type {
+  margin-bottom: unset;
+}
+
+.faq .accordionButton {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background: white;
+  text-align: left;
+  color: #000;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq .accordionButton::after {
+  content: '\25be';
+  float: right;
+  transform: scale(2);
+  margin-left: .3em;
+}
+
+
+
+.faq .accordionContent {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  display: none;
+  overflow: auto;
+  transition: display 0.2s ease;
+}
+
+.faq .accordionContent sup {
+  vertical-align: super;
+  font-size: .7rem;
+}
+
+.faq .accordionContent ul {
+  margin-top: 1em;
+  list-style: square;
+  margin-left: 1em;
+  box-sizing: border-box;
+}
+
+.faq .accordionContent ul + p {
+  margin-top: 1em;
+}
+
+.faq .accordionButton.selected {
+  margin-bottom: 1.5em;
+}
+
+.faq .accordionButton.selected + .accordionContent {
+  display: block;
+}
+
+.faq .accordionButton.selected::after {
+  content: '\25b4';
+}
+
+/*==============================
+  end of faq section
+==============================*/
+
+/*==============================
+  footer
+==============================*/
+
+.footer {
+  margin-top: 5em;
+  padding-top: 3em;
+  padding-bottom: 2em;
+  background: #e6e6e6;
+}
+
+.footer .footerMainInf {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.footer .logo {
+  width: 5%;
+}
+
+.footer .logo a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.footer .logo img {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer .workingHoursInf {
+  width: 25%;
+}
+
+.footer .contactByPhone {
+  width: 20%;
+  text-align: center;
+}
+
+.footer .contactNumber {
+  margin-bottom: 1em;
+}
+
+.footer .callBackLink {
+  color: #ed7d02;
+  text-decoration: underline;
+  transition: transform, text-shadow .5 ease;
+}
+
+.footer .callBackLink:hover {
+  transform: scale(1.02);
+}
+
+.footer .callBackLink:focus {
+  transform: scale(1.02);
+  text-shadow: 0px 0px 1px grey;
+
+}
+
+.footer .physicalAddress {
+  width: 35%;
+}
+
+.footer .socialNetworks {
+  width: 10%;
+}
+
+.footer .socialNetworkLink:first-child {
+  margin-right: .5em;
+}
+
+.footer .socialNetworkLink.instagram {
+  font-size: 1.5rem;
+}
+
+.footer .socialNetworkLink.youtube {
+  font-size: 1.7rem;
+}
+
+.footer .socialNetworkLink:hover,
+.footer .socialNetworkLink:focus {
+  color: #ed7d02
+}
+
+.footer .socialNetworkLink:active {
+  color: #5f5e5e
+}
+
+.footer .footerSecondaryInf {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5em;
+}
+
+.footer .websiteDevLink:hover,
+.footer .websiteDevLink:focus {
+  text-decoration: underline;
+}
+
+.footer .websiteDevLink:active {
+  color: #5f5e5e;
+}
+
+/*==============================
+  end of footer
+==============================*/
+
+/*==============================
+  media (max-width: 1200px)
+==============================*/
+@media (max-width: 1200px) {
+
+  /*==========================
+    callBackModal
+  ============================*/
+
+  .callBackModal .tingle-modal-box {
+    width: 30%;
+  }
+
+  .callBackModal h2 {
+    font-size: 1rem;
+  }
+
+  /*==========================
+    end of callBackModal
+  ============================*/
+
+  /*==========================
+    first view
+  ============================*/
+
+  .headerInf p {
+    font-size: 1rem;
+  }
+
+  .headerTop .callBackButton>button {
+    font-size: 1rem;
+  }
+
+  .headerDown.nav>ul {
+    font-size: 0.8rem;
+  }
+
+  .firstView .board .slogan {
+    font-size: 2rem;
+  }
+
+  .firstView .littleCalc h2 {
+    font-size: 1rem;
+  }
+
+  .firstView .littleCalc p {
+    font-size: 0.7rem;
+  }
+
+  .firstView .littleCalc>p:nth-of-type(2) {
+    font-size: 0.6rem;
+  }
+
+  .firstView .littleCalc span.totalAmount {
+    font-size: 1.2rem;
+  }
+
+  .firstView .littleCalc .mainCalcLink {
+    font-size: 0.5rem;
+  }
+
+  /*==========================
+    end of first view
+  ============================*/
+
+  /*==========================
+    advantages section
+  ============================*/
+
+  .advantages .advantagesList {
+    align-items: flex-start;
+  }
+
+  .advantages .advantagesListItem {
+    width: 40%;
+  }
+
+  .advantages .advantage {
+    flex-direction: column;
+  }
+
+  .advantages .advantageIllustration {
+    width: 40%;
+  }
+
+  .advantages .advantageCaption {
+    width: 100%;
+    margin-top: 1.5em;
+    text-align: center;
+  }
+
+  /*==========================
+    end of advantages section
+  ============================*/
+
+  /*==========================
+    general prices section
+  ============================*/
+  .generalPrices .priceListItem {
+    width: 45%;
+  }
+
+  /*==========================
+    end of general prices section
+  ============================*/
+
+  /*==========================
+    ceiling types section
+  ============================*/
+  .ceilingTypes .ceilingTypesInf {
+    justify-content: center;
+    height: unset;
+  }
+
+  .ceilingTypes .ceilingTypeList {
+    width: 70%;
+    margin-top: 3em;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .ceilingTypes .ceilingTypeListItem {
+    width: 45%;
+    margin-top: 1em;
+    padding: 1em 0.3em;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ceilingTypes .ceilingTypeIllustration {
+    width: 70%;
+    height: unset;
+  }
+
+  .ceilingTypes .ceilingTypeIllustration>figure {
+    height: unset;
+  }
+
+  .ceilingTypes .ceilingTypeImage {
+    height: unset;
+  }
+
+  .ceilingTypes .ceilingTypeCaption {
+    height: unset;
+  }
+
+  /*==========================
+    end of ceiling types section
+  ============================*/
+
+  /*==========================
+    ceiling catalog section
+  ============================*/
+
+  .ceilingCatalog .filterList {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .ceilingCatalog .filterListItem {
+    flex-basis: unset;
+    flex-grow: unset;
+    margin-right: unset;
+    width: 21%;
+    margin-top: 1em;
+  }
+
+  .ceilingCatalog .imageGalleryIllustration {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .ceilingCatalog .mainImageContainer,
+  .ceilingCatalog .secondaryImagesContainer {
+    width: 100%;
+  }
+
+  .ceilingCatalog .secondaryImagesContainer {
+    flex-direction: row;
+    margin-top: 3em;
+  }
+
+  .ceilingCatalog .secondaryImageContainer {
+    height: 100%;
+    width: 47%;
+  }
+
+  /*==========================
+    end of ceiling catalog section
+  ============================*/
+
+  /*==========================
+    feedbacks section
+  ============================*/
+
+  .feedbacks .videoFeedbacks {
+    min-height: 800px;
+  }
+
+  .feedbacks .videoFeedback {
+    width: 45%;
+  }
+
+  /*==========================
+    end of feedbacks section
+  ============================*/
+
+  /*==========================
+    about section
+  ============================*/
+
+  .about .content {
+    flex-wrap: wrap;
+  }
+
+  .about .facts,
+  .about .description {
+    width: 100%;
+  }
+
+  .about .facts {
+    margin-bottom: 2em;
+  }
+
+  /*==========================
+    end of about section
+  ============================*/
+
+  /*============================
+  working process section
+  ============================*/
+
+  .workingProcess .step {
+    width: 45%;
+  }
+
+  /*============================
+  end of working process section
+  ============================*/
+
+  /*==============================
+  main calculator
+  ==============================*/
+
+  .mainCalc .mainCalcForm {
+    justify-content: center;
+  }
+
+  .mainCalc .sizeOfCeiling,
+  .mainCalc .formGroup:nth-child(2) {
+    width: 70%;
+  }
+
+  .mainCalc .formGroup:nth-child(2) {
+    margin-top: 5em;
+  }
+
+  .mainCalc .serviceGroup {
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  /*==============================
+  end of main calculator
+  ==============================*/
+
+  /*==============================
+    faq section
+  ==============================*/
+
+  .faq h2 {
+    margin-top: 2em;
+  }
+
+  /*==============================
+    end of faq section
+  ==============================*/
+
+
+}
+
+/*==============================
+  end of media (max-width: 1200px)
+==============================*/
+
+/*==============================
+  media (max-width: 900px)
+==============================*/
+
+@media (max-width: 900px) {
+
+  /*==========================
+    general styles
+  ============================*/
+
+  section>.container>h2,
+  section.container>h2 {
+    font-size: 2rem;
+  }
+
+  /*==========================
+    end of general styles
+  ============================*/
+
+  /*==========================
+    callBackModal
+  ============================*/
+
+  .callBackModal .tingle-modal-box {
+    width: 37%;
+  }
+
+  .callBackModal .tingle-modal-box__content {
+    padding: 3rem 0.5rem 1.2rem;
+  }
+
+  .callBackModal h2 {
+    font-size: 1rem;
+  }
+
+  .callBackModal .tingle-modal-box__footer {
+    padding: 0 0.5rem 3rem;
+  }
+
+  /*==========================
+    end of callBackModal
+  ============================*/
+
+  /*==========================
+    first view
+  ============================*/
+
+  .header.whited {
+    z-index: 15;
+  }
+
+  .headerTop {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+
+  .headerInf {
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+
+
+  .headerTop .workingHoursInf {
+    margin-bottom: 0.8em;
+  }
+
+  .headerTop .menuIcon {
+    display: block;
+  }
+
+  .header.whited .headerDown {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em;
+  }
+
+
+  .headerDown.nav>ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.7rem;
+  }
+
+  .headerDown.nav li {
+    padding: 1em;
+  }
+
+  .headerDown.nav li:hover {
+    text-decoration: underline
+  }
+
+  .headerDown.nav li:active {
+    color: #ed7d02
+  }
+
+  .headerDown.nav li>a {
+    color: black;
+  }
+
+  .headerDown.nav .callBackButton>button {
+    font-size: 0.7rem;
+    padding: .5rem .5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .mainSlider .glide__bullets {
+    bottom: 0;
+    left: 3%;
+    width: unset;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .mainSlider .glide__bullet {
+    border-top: unset;
+    border-left: .2rem orange solid;
+    width: unset;
+    height: 2rem;
+    margin-right: unset;
+    margin-top: 2em;
+  }
+
+  .mainSlider .glide__bullet:first-child {
+    margin-top: 0;
+  }
+
+  .mainSlider .glide__bullet--active {
+    border-top: unset;
+    border-left: .2rem white solid;
+  }
+
+  .firstView .board {
+    margin-left: 2em;
+  }
+
+  .firstView .board .slogan {
+    font-size: 1.5rem;
+  }
+
+  .firstView .mainAdvantages {
+    font-size: 1rem;
+    padding-left: 2em;
+  }
+
+  .firstView .littleCalc h2 {
+    font-size: 0.8rem;
+  }
+
+  .firstView .littleCalc p {
+    font-size: 0.6rem;
+  }
+
+  .firstView .littleCalc>p:nth-of-type(2) {
+    font-size: 0.5rem;
+  }
+
+  .firstView .littleCalc span.areaOfCeiling {
+    font-size: 0.8rem;
+  }
+
+  .firstView .littleCalc span.totalAmount {
+    font-size: 1rem;
+  }
+
+  .firstView .littleCalc .mainCalcLink {
+    font-size: 0.4rem;
+  }
+
+  /*==========================
+    end of first view
+  ============================*/
+
+  /*==========================
+    advantages section
+  ============================*/
+
+  .advantages .advantagesListItem {
+    width: 70%;
+  }
+
+  /*==========================
+    end of advantages section
+  ============================*/
+
+  /*==========================
+    general prices section
+  ============================*/
+
+  .generalPrices h2 {
+    margin-top: 2em;
+  }
+
+  .generalPrices .priceList {
+    justify-content: center;
+  }
+
+  .generalPrices .priceListItem {
+    width: 70%;
+  }
+
+  /*==========================
+    end of general prices section
+  ============================*/
+
+  /*==========================
+    ceiling catalog section
+  ============================*/
+
+  .ceilingCatalog .categoryList {
+    font-size: 0.8rem;
+  }
+
+  .ceilingCatalog .filterListItem {
+    width: 30%;
+  }
+
+  /*==========================
+    end of ceiling catalog section
+  ============================*/
+
+  /*==========================
+    feedbacks section
+  ============================*/
+
+  .feedbacks .videoFeedbacks {
+    min-height: 670px;
+  }
+
+  /*==========================
+    end of feedbacks section
+  ============================*/
+
+  /*============================
+  working process section
+  ============================*/
+
+  .workingProcess .steps {
+    justify-content: center;
+  }
+
+  .workingProcess .step {
+    width: 70%;
+  }
+
+  /*============================
+  end of working process section
+  ============================*/
+
+  /*==============================
+  main calculator
+  ==============================*/
+
+  .mainCalc h2 {
+    margin-top: 2em;
+  }
+
+  .mainCalc .sizeOfCeiling,
+  .mainCalc .formGroup:nth-child(2) {
+    width: 90%;
+  }
+
+  .mainCalc .serviceGroup:first-of-type {
+    flex-direction: column;
+  }
+
+  /*==============================
+  end of main calculator
+  ==============================*/
+
+  /*==============================
+    faq section
+  ==============================*/
+
+  .faq {
+    background-size: 20em;
+  }
+
+  .faq h2 {
+    margin-top: 1em;
+  }
+
+  /*==============================
+    end of faq section
+  ==============================*/
+
+  /*==============================
+    footer
+  ==============================*/
+
+  .footer .footerMainInf {
+    flex-wrap: wrap;
+  }
+
+  .footer .logo {
+    width: 10%;
+  }
+
+  .footer .workingHoursInf {
+    width: 60%;
+    text-align: center;
+  }
+
+  .footer .contactByPhone {
+    width: 25%;
+    text-align: right;
+  }
+
+  .footer .physicalAddress,
+  .footer .socialNetworks {
+    margin-top: 2em;
+  }
+
+  .footer .physicalAddress {
+    width: 60%;
+    text-align: left;
+  }
+
+  .footer .socialNetworks {
+    width: 30%;
+    text-align: right;
+  }
+
+  /*==============================
+    end of footer
+  ==============================*/
+
+  /*==============================
+    back to top button
+  ===============================*/
+
+  .backToTop {
+    bottom: calc(1rem + 1vh);
+    right: calc(1rem + 1vw)
+  }
+
+  /*==============================
+    end of back to top button
+  ===============================*/
+
+}
+
+/*==============================
+  end of media (max-width: 900px)
+==============================*/
+
+/*==============================
+  media (max-width: 600px)
+==============================*/
+
+@media (max-width: 600px) {
+
+  /*==========================
+    general styles
+  ============================*/
+
+  section {
+    margin-top: 5em;
+  }
+
+  section>.container>h2,
+  section.container>h2 {
+    font-size: 1.5rem;
+  }
+
+  /*==========================
+    end of general styles
+  ============================*/
+
+  /*==========================
+    callBackModal
+  ============================*/
+
+  .callBackModal .tingle-modal-box {
+    width: 90%;    
+  }
+
+  .callBackModal .tingle-modal-box__content {
+    padding: 3rem 1.5rem 1.2rem;
+    overflow-y: unset;
+  }
+
+  .callBackModal h2 {
+    font-size: 1rem;
+  }  
+
+  .callBackModal .tingle-modal-box__footer {
+    padding: 0 1.5rem 3rem;
+  }
+
+  .callBackModal .tingle-modal__close {
+    background-color: #ed7d02;
+  }
+
+  .callBackModal .button {
+    max-width: 90%;
+  }
+
+  /*==========================
+    end of callBackModal
+  ============================*/
+
+  /*==========================
+    first view
+  ============================*/
+
+  .headerTop .logo {
+    width: 10%;
+  }
+
+  .headerInf p {
+    font-size: 0.7rem;
+  }
+
+  .headerTop .workingHoursInf {
+    margin-bottom: 0.5em;
+  }
+
+  .headerTop .menuIcon {
+    width: 7%;
+  }
+
+  .firstView .board .slogan {
+    font-size: 1.2rem;
+  }
+
+  .firstView .mainAdvantages {
+    font-size: 0.7rem;
+    padding-left: 1em;
+  }
+
+  .firstView .littleCalc {
+    padding: 2em;
+  }
+
+  .firstView .littleCalc h2 {
+    font-size: 0.7rem;
+  }
+
+  .firstView .littleCalc p {
+    font-size: 0.5rem;
+  }
+
+  .firstView .littleCalc>p:nth-of-type(2) {
+    font-size: 0.4rem;
+  }
+
+  .firstView .littleCalc span.areaOfCeiling {
+    font-size: 0.7rem;
+  }
+
+  .firstView .littleCalc span.totalAmount {
+    font-size: 0.8rem;
+  }
+
+
+  /*==========================
+    end of first view
+  ============================*/
+
+  /*==========================
+    advantages section
+  ============================*/
+
+  .advantages .advantageTitle {
+    font-size: 1.2rem;
+  }
+
+  .advantages .advantage {
+    font-size: 0.8rem;
+  }
+
+  /*==========================
+    end of advantages section
+  ============================*/
+
+  /*==========================
+    general prices section
+  ============================*/
+
+  .generalPrices h2 {
+    margin-top: 3em;
+  }
+
+  .generalPrices .priceListItem {
+    width: 80%;
+    padding-bottom: 2em;
+  }
+
+  .generalPrices .priceListItemInf {
+    height: auto;
+  }
+
+  .generalPrices .priceListItemTitle {
+    font-size: 1.2rem;
+  }
+
+  .generalPrices .manufacturerInfTitle {
+    font-size: 1rem;
+  }
+
+  .generalPrices .manufacturer {
+    width: 100%;
+  }
+
+  .generalPrices .manufacturer:nth-child(odd),
+  .generalPrices .manufacturer:nth-child(even) {
+    text-align: left;
+    padding: unset;
+  }
+
+  .generalPrices .minPriceForCeilingType,
+  .generalPrices .forMoreLink {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1rem;
+  }
+
+  /*==========================
+    end of general prices section
+  ============================*/
+
+  /*==========================
+    ceiling types section
+  ============================*/
+
+  .ceilingTypes {
+    padding-bottom: 10em;
+    padding-top: 17em;
+  }
+
+  .ceilingTypes .ceilingTypeList {
+    width: 80%;
+  }
+
+  .ceilingTypes .ceilingTypeListItem {
+    padding: 0.5em 0.1em;
+    font-size: 0.7rem;
+  }
+
+  .ceilingTypes .ceilingTypeIllustration {
+    width: 80%;
+  }
+
+  .ceilingTypes .ceilingTypeCaption {
+    font-size: 0.8rem;
+  }
+
+
+  /*==========================
+    end of ceiling types section
+  ============================*/
+
+  /*==========================
+    ceiling catalog section
+  ============================*/
+
+  .ceilingCatalog {
+    margin-top: unset;
+  }
+
+  .ceilingCatalog .categoryList {
+    font-size: 0.4rem;
+  }
+
+  .ceilingCatalog .filterList {
+    font-size: 0.4rem;
+  }
+
+  .ceilingCatalog .directionControllersContainer {
+    width: 30%;
+  }
+
+  .ceilingCatalog .directionController {
+    height: 15px;
+    width: 15px;
+  }
+
+  /*==========================
+    end of ceiling catalog section
+  ============================*/
+
+  /*==========================
+    feedbacks section
+  ============================*/
+
+  .feedbacks .feedbackTypes {
+    font-size: 0.8rem;
+  }
+
+  .feedbacks .videoFeedbacks {
+    min-height: 600px;
+    justify-content: center;
+  }
+
+  .feedbacks .videoFeedback {
+    width: 80%;
+  }
+
+
+
+  /*==========================
+    end of feedbacks section
+  ============================*/
+
+  /*==========================
+    about section
+  ============================*/
+
+  .about .facts,
+  .about .description {
+    padding: 2em 1.2em;
+  }
+
+  .about .facts {
+    font-size: 1rem;
+  }
+
+  .about .description {
+    font-size: 0.8rem;
+  }
+
+  .about .linkToDetails {
+    margin-top: 1em;
+  }
+
+  /*==========================
+    end of about section
+  ============================*/
+
+  /*============================
+    working process section
+  ============================*/
+
+  .workingProcess .step {
+    width: 90%;
+  }
+
+  .workingProcess .stepName {
+    font-size: 1.5rem;
+  }
+
+  .workingProcess .stepDescription {
+    font-size: 1rem;
+  }
+
+  .workingProcess .step:last-child h2 {
+    font-size: 1.1rem;
+  }
+
+  .workingProcess .callBackForm {
+    width: 100%;
+  }
+
+  /*==============================
+    end of working process section
+  ==============================*/
+
+  /*==============================
+    main calculator
+  ==============================*/
+
+  .mainCalc h2 {
+    margin-top: 4em;
+  }
+
+  .mainCalc .mainCalcForm>* {
+    padding: 4em 1.5em;
+  }
+
+  .mainCalc .sizeOfCeiling h3 {
+    font-size: 1.2rem;
+  }
+
+  .mainCalc .sizeOfCeiling .labelText {
+    font-size: 0.8rem;
+  }
+
+  .mainCalc .totalAmount .value {
+    font-size: 1.5rem;
+  }
+
+  .mainCalc .totalAmount .currency {
+    font-size: 1.2rem;
+  }
+
+  .mainCalc .showAdditionalEls.container {
+    margin-left: .5em;
+  }
+
+  .mainCalc .showAdditionalEls.container,
+  .mainCalc .profileOfCeiling.container,
+  .mainCalc .camouflageInsert.container {
+    display: flex;
+    align-items: center;
+  }
+
+  .mainCalc .showAdditionalEls .labelText,
+  .mainCalc .profileOfCeiling .labelText,
+  .mainCalc .camouflageInsert .labelText {
+    font-size: 0.8rem;
+    margin-top: 0.5em;
+  }
+
+  .mainCalc .additionalServices {
+    font-size: 0.7rem;
+  }
+
+  .mainCalc input[type="number"] {
+    width: 35px;
+    height: 20px;
+  }
+
+  .mainCalc .profileTypes,
+  .mainCalc .camouflageInsertTypes {
+    margin-top: 2em;
+  }
+
+  .mainCalc .profileType .labelText,
+  .mainCalc .camouflageInsertType .labelText {
+    font-size: 0.6rem;
+  }
+
+  /*==============================
+    end of main calculator
+  ==============================*/
+
+  /*==============================
+    faq section
+  ==============================*/
+
+  .faq {
+    background-size: 15em;
+  }
+
+  .faq h2 {
+    margin-top: .5em;
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+  }
+
+  .faq .qaList {
+    width: 80%;
+    margin-top: 12em;
+  }
+
+  .faq .accordionButton {
+    font-size: 1rem;
+  }
+
+  .faq .accordionContent {
+    font-size: .8rem;
+  }
+
+  /*==============================
+    end of faq section
+  ==============================*/
+
+  /*==============================
+    footer
+  ==============================*/
+
+  .footer .footerMainInf {
+    font-size: 0.7rem;
+  }
+
+  .footer .workingHoursInf {
+    width: 70%;
+    text-align: right;
+  }
+
+  .footer .contactByPhone {
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
+  }
+
+  .footer .socialNetworkLink.instagram {
+    font-size: 1rem;
+  }
+
+  .footer .socialNetworkLink.youtube {
+    font-size: 1.1rem;
+  }
+
+  .footer .footerSecondaryInf {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer .footerSecondaryInf small {
+    width: 100%;
+    text-align: center;
+  }
+
+  /*==============================
+    end of footer
+  ==============================*/
+}
+
+/*==============================
+  end of media (max-width: 600px)
+==============================*/

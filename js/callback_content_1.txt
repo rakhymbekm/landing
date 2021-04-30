@@ -1,0 +1,157 @@
+<h2>
+Дополнительные услуги
+</h2>
+<ul>
+<li>
+<span class="field">
+Монтаж крючковой люстры:
+</span>
+<span class="value">
+от 1500 тенге (шт.)
+</span>
+</li>
+<li>
+<span class="field">
+Установка планочной люстры:
+</span>
+<span class="value">
+от 2000 тенге (шт.) (включая каркас)
+</span>
+</li>
+<li>
+<span class="field">
+Установка крючков с тех. отверстием:
+</span>
+<span class="value">
+от 500 тенге (шт.)
+</span>
+</li>
+<li>
+<span class="field">
+Установка каркаса под планочную люстру:
+</span>
+<span class="value">
+от 1000 тенге (шт.) (без монтажа люстры)
+</span>
+</li>
+<li>
+<span class="field">
+Сборка люстр:
+</span>
+<span class="value">
+от 3000 тенге (шт.)
+</span>
+</li>
+<li>
+<span class="field">
+Установка споты:
+</span>
+<span class="value">
+от 1200 тенге (шт.)
+</span>
+</li>
+<li>
+<span class="field">
+Разделительный багет:
+</span>
+<span class="value">
+от 2000 тенге (п.м.)
+</span>
+</li>
+<li>
+<span class="field">
+Маскирующая лента с монтажом (п.м.):
+</span>
+<span class="value">
+500 тенге
+</span>
+</li>
+<li>
+<span class="field">
+Установка подшторника (п.м.):
+</span>
+<span class="value">
+2000 тенге
+</span>
+</li>
+<li>
+<span class="field">
+Установка подшторника с гипсокартоном (п.м.):
+</span>
+<span class="value">
+2500 тенге
+</span>
+</li>
+<li>
+<span class="field">
+Установка потолочной гардины на натяжной потолок (п.м.):
+</span>
+<span class="value">
+1500 тенге
+</span>
+</li>
+<li>
+<span class="field">
+Обвод трубы:
+</span>
+<span class="value">
+от 2000 тенге (шт.)
+</span>
+</li>
+<li>
+<span class="field">
+Монтаж пожарных датчиков:
+</span>
+<span class="value">
+от 1500 тенге (шт.)
+</span>
+</li>
+<li>
+<span class="field">
+Демонтаж галтели (п.м.):
+</span>
+<span class="value">
+500 тенге
+</span>
+</li>
+<li>
+<span class="field">
+Установка вытяжки:
+</span>
+<span class="value">
+от 2000 тенге (шт.)
+</span>
+</li>
+<li>
+<span class="field">
+Дальность (за пределы г. Алматы, свыше 20км.):
+</span>
+<span class="value">
+от 3000 тенге
+</span>
+</li>
+<li>
+<span class="field">
+Монтаж электропроводки (п.м.) с материалом заказчика:
+</span>
+<span class="value">
+500 тенге
+</span>
+</li>
+<li>
+<span class="field">
+Повторный выезд в районе города:
+</span>
+<span class="value">
+2000 тенге
+</span>
+</li>
+<li>
+<span class="field">
+Керамо-гранитная поверхность (п.м.):
+</span>
+<span class="value">
+1500 тенге
+</span>
+</li>
+</ul>
