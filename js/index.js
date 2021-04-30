@@ -2411,6 +2411,12 @@
     
     catalogOfCeilingsEl.append(ceilingCategoryInfEl);
 
+
+    // this part should be refactored
+    return new Promise(function(resolve, reject) {
+      resolve();
+    });
+
   }; // end of ceilingsCatalogHandler
 
   var aboutSectionHandler = function () {
@@ -3468,21 +3474,9 @@
       var smoothScroller, loader, xhr;
 
       // getting the components ready
-      
+
       loader = document.querySelector(".loader");
       loader.className += " hidden";
-
-      smoothScroller = new SmoothScroll();
-
-      // I should refactor it further
-      var hash = document.location.hash;
-
-      var classOfTargetSection = getClassOfTargetEl(hash);
-      var targetEl = document.querySelector(classOfTargetSection);
-
-      smoothScroller.animateScroll(targetEl.getBoundingClientRect().top);
-
-      // end of updates
 
       var inputChanged = new Event('input', {
 
@@ -3503,7 +3497,9 @@
       }).mount();
 
       xhr = new XMLHttpRequest();
-
+      
+      smoothScroller = new SmoothScroll();
+      
       callBackButtonHandler(xhr);
 
       litteCalcHandler(inputChanged, smoothScroller);
@@ -3512,7 +3508,23 @@
 
       ceilingTypesSectionHandler();
 
-      ceilingsCatalogHandler();
+      ceilingsCatalogHandler()
+        .then(function() {
+          // I should refactor it further
+
+              // it's placed here because ceilings catalog section changes its height dynamically
+              // I should refactor this code further
+          var hash = document.location.hash;
+
+          var classOfTargetSection = getClassOfTargetEl(hash);
+          var targetEl = document.querySelector(classOfTargetSection);
+
+          smoothScroller.animateScroll(targetEl.getBoundingClientRect().top + targetEl.clientHeight);
+
+          // end of updates
+        });
+
+      
 
       aboutSectionHandler();
 
@@ -3521,6 +3533,8 @@
       faqSectionHandler();
       
       backToTopBtnHandler(smoothScroller);
+
+
       
     }
     
