@@ -3472,6 +3472,18 @@
       loader = document.querySelector(".loader");
       loader.className += " hidden";
 
+      smoothScroller = new SmoothScroll();
+
+      // I should refactor it further
+      var hash = document.location.hash;
+
+      var classOfTargetSection = getClassOfTargetEl(hash);
+      var targetEl = document.querySelector(classOfTargetSection);
+
+      smoothScroller.animateScroll(targetEl.getBoundingClientRect().top);
+
+      // end of updates
+
       var inputChanged = new Event('input', {
 
         'bubbles': true,
@@ -3489,8 +3501,6 @@
         gap: 0,
         perTouch: 1
       }).mount();
-
-      smoothScroller = new SmoothScroll();
 
       xhr = new XMLHttpRequest();
 
